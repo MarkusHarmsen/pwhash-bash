@@ -1,4 +1,4 @@
-PwHash (Basj)
+PwHash (Bash)
 =============
 
 PwHash is a simple password generator which uses well-known algorithms
@@ -7,7 +7,7 @@ to generate a strong uniq password for any service based on a given (master) pas
 You simply enter the current service tag as well as your (master) password to generate a strong hash
 which is copied to clipboard and can now be used as login password.
 
-There also exists an [android version](https://github.com/MarkusHarmsen/pwhash-android) of pwhash.
+There also exists an [android version](https://github.com/MarkusHarmsen/pwhash-android) and [GTK](https://github.com/MarkusHarmsen/pwhash-gtk) of pwhash.
 
 
 Example
