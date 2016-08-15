@@ -24,7 +24,7 @@ read password
 stty echo
 
 hash=$(echo -n "$tag" | openssl dgst -sha1 -hmac "$password" -binary | base64)
-printf "%.${length}s\n" "$hash" | xclip -sel clip
+printf "%.${length}s" "$hash" | xclip -sel clip
 
 echo ""
 echo "The Password has been copied to clipboard"
