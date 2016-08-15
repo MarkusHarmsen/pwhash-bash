@@ -22,5 +22,4 @@ read -p "Password: " -s password
 hash=$(echo -n "$tag" | openssl dgst -sha1 -hmac "$password" -binary | base64)
 printf "%.${length}s" "$hash" | xclip -sel clip
 
-echo ""
-echo "The Password has been copied to clipboard"
+printf "\nThe Password has been copied to clipboard"
