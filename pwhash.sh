@@ -19,7 +19,9 @@ fi
 # Get password
 read -p "Password: " -s password
 
+# Compute hash (e.g HMAC with tag and password)
 hash=$(echo -n "$tag" | openssl dgst -sha1 -hmac "$password" -binary | base64)
+# Copy to clipboard with given length
 printf "%.${length}s" "$hash" | xclip -sel clip
 
 printf "\nThe Password has been copied to clipboard\n"
