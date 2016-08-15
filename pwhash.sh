@@ -11,7 +11,7 @@ fi
 # Optional second argument length
 length=${2:-16}
 # Ensure integer
-length=$(($length+0))
+length=$(($length))
 # At most 26 characters
 if (( $length > 26 )); then
   length=26
