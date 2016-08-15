@@ -19,9 +19,7 @@ fi
 
 # Get password
 echo -n "Password: "
-stty -echo
-read password
-stty echo
+read -s password
 
 hash=$(echo -n "$tag" | openssl dgst -sha1 -hmac "$password" -binary | base64)
 printf "%.${length}s" "$hash" | xclip -sel clip
