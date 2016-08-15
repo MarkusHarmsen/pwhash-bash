@@ -4,8 +4,7 @@
 tag=${1}
 # If not provided, read tag
 if [ "$tag" == "" ]; then
-  echo -n "Tag: "
-  read tag
+  read -p "Tag: " tag
 fi
 
 # Optional second argument length
@@ -18,8 +17,7 @@ if (( $length > 26 )); then
 fi
 
 # Get password
-echo -n "Password: "
-read -s password
+read -p "Password: " -s password
 
 hash=$(echo -n "$tag" | openssl dgst -sha1 -hmac "$password" -binary | base64)
 printf "%.${length}s" "$hash" | xclip -sel clip
