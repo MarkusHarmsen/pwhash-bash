@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Tag
 tag=${1}
